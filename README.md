@@ -15,7 +15,7 @@ docker image push inhouseharbor.foo.bar/myagentrepository/azuredevopsrunner:late
 
 You should now have an image that's capable of running the agent. Let's go forward to the k8s part.<br />
 
-- Login to one of your k8s nodes and create a k8s secret, for this how-to I'll use the Default namespace<br />
+- Login to one of your k8s nodes and create a k8s secret, for this how-to I'll use the Default namespace:<br />
 kubectl create secret generic azdevops   --from-literal=AZP_URL=https://dev.azure.com/MyCompany   --from-literal=AZP_TOKEN=<YOUR_PAT>   --from-literal=AZP_POOL=<POOL_NAME>
 
 - Create the ReplicationController:<br />
